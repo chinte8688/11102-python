@@ -1,39 +1,49 @@
-a,b,c,d = eval(input("請輸入 4 個數字以,號分開："))
+a,b,c,d,e = eval(input("請輸入 5 個數字以,號分開："))
 
-print("您輸入的數字是：%d %d %d %d" % (a,b,c,d))
+print("輸 入 數 字 %d %d %d %d %d" % (a,b,c,d,e))
 i = 0
+j = 0
 swap = 0
-while a > b or b > c or c > d :
-    if a < b and b < c and c < d:
-        print("第 %d 圈 %d %d %d %d 排序完畢02" % (i,a,b,c,d))
+while a > b or b > c or c > d or d > e:
+    if a < b and b < c and c < d and d < e:
+        print("第%02d圈-%02d輪 %d %d %d %d %d 排序完畢01" % (i,j,a,b,c,d,e))
         break
-    elif a > b or b > c and c > d: 
-            #c > d     
-         swap = c
-         c = d
-         d = swap
-         i = i + 1
-         print("第 %d 圈 %d %d %d %d " % (i,a,b,c,d))
-         #continue
-    elif a > b or b > c:    
-            #b > c 
-        #if a < b :
-        #     continue 
-
-          
-         swap = b
-         b = c
-         c = swap
-         i = i + 1
-         print("第 %d 圈 %d %d %d %d " % (i,a,b,c,d))  
-         #continue
-    elif a > b :
-            #a > b           
-         swap = a
-         a = b
-         b = swap
-         i = i + 1
-         print("第 %d 圈 %d %d %d %d " % (i,a,b,c,d))
-         #continue    
-    else:     
-        print("第 %d 圈 %d %d %d %d 排序完畢01" % (i,a,b,c,d))    
+    else:
+        i += 1
+        if a > b or b > c or c > d or d > e: 
+           if d > e :     
+              swap = d
+              d = e
+              e = swap
+              j += 1
+              print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+        else:
+            continue
+        if a > b or b > c or c > d: 
+           if c > d :     
+              swap = c
+              c = d
+              d = swap
+              j += 1
+              print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+        else:
+            continue
+        if a > b or b > c:      
+            if b > c:
+               swap = b
+               b = c
+               c = swap
+               j += 1
+               print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+        else:    
+            continue
+        if a > b :          
+            swap = a
+            a = b
+            b = swap
+            j += 1
+            print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+        else:
+            continue    
+         
+print("第%02d圈-%02d輪 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))     
