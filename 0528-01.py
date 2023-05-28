@@ -4,11 +4,12 @@ print("輸 入 數 字 %d %d %d %d %d" % (a,b,c,d,e))
 i = 0
 j = 0
 swap = 0
-while a > b or b > c or c > d or d > e:
+
+while True:    
     if a < b and b < c and c < d and d < e:
         print("第%02d圈-%02d輪 %d %d %d %d %d 排序完畢01" % (i,j,a,b,c,d,e))
         break
-    else:
+    else : 
         i += 1
         if a > b or b > c or c > d or d > e: 
            if d > e :     
@@ -16,7 +17,12 @@ while a > b or b > c or c > d or d > e:
               d = e
               e = swap
               j += 1
-              print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+              
+              if a < b and b < c and c < d and d < e:
+                print("第%02d圈-%02d輪 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))
+                break
+              else:
+                print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
         else:
             continue
         if a > b or b > c or c > d: 
@@ -44,6 +50,4 @@ while a > b or b > c or c > d or d > e:
             j += 1
             print("第%02d圈-%02d輪 %d %d %d %d %d" % (i,j,a,b,c,d,e))
         else:
-            continue    
-         
-print("第%02d圈-%02d輪 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))     
+            continue  
