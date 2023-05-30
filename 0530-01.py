@@ -1,53 +1,73 @@
-a,b,c,d,e = eval(input("請輸入 5 個數字以[,]號分開："))
+n1,n2,n3,n4,n5 = eval(input("請輸入 5 個數字以[,]號分開："))
 
-print("您輸入的數字為 %d %d %d %d %d" % (a,b,c,d,e))
+print("您輸入的數字為 %d %d %d %d %d" % (n1,n2,n3,n4,n5))
 i = 0                                             # 圈數  
 j = 0                                             # 交換數  
-swap = 0                                          # 交換空間
+swn1p = 0                                          # 交換空間
 
-if a < b and b < c and c < d and d < e:           # if 由小排到大 = True
-        print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢01" % (i,j,a,b,c,d,e))
+if n1 < n2 and n2 < n3 and n3 < n4 and n4 < n5:           # if 由小排到大 = Trun5
+        print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢01" % (i,j,n1,n2,n3,n4,n5))
         
-while a > b or b > c or c > d or d > e:             # 排序未完成 
+while n1 > n2 or n2 > n3 or n3 > n4 or n4 > n5:             # 排序未完成 
     i += 1                                          # 圈數計算
-    if a > b or b > c or c > d or d > e: 
-        if d > e :     
-            swap = d
-            d = e
-            e = swap
+    if n1 > n2 or n2 > n3 or n3 > n4 or n4 > n5: 
+        if n4 > n5 :     
+            swn1p = n4
+            n4 = n5
+            n5 = swn1p
             j += 1
               
-            if a < b and b < c and c < d and d < e:
-                print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))
+            if n1 < n2 and n2 < n3 and n3 < n4 and n4 < n5:
+                print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢02" % (i,j,n1,n2,n3,n4,n5))
                 break
             else:
-                print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+                print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))
     else:
         continue
 
-    if a > b or b > c or c > d: 
-           if c > d :     
-              swap = c
-              c = d
-              d = swap
-              j += 1
-              print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+    if n1 > n2 or n2 > n3 or n3 > n4: 
+        if n3 > n4 :     
+            swn1p = n3
+            n3 = n4
+            n4 = swn1p
+            j += 1
+
+            if n1 < n2 and n2 < n3 and n3 < n4 and n4 < n5:
+                print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢03" % (i,j,n1,n2,n3,n4,n5))
+                break
+            else:
+                print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))
+              
     else:
             continue
-    if a > b or b > c:      
-            if b > c:
-               swap = b
-               b = c
-               c = swap
-               j += 1
-               print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+    
+    if n1 > n2 or n2 > n3:      
+        if n2 > n3:
+           swn1p = n2
+           n2 = n3
+           n3 = swn1p
+           j += 1
+
+           if n1 < n2 and n2 < n3 and n3 < n4 and n4 < n5:
+                print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢04" % (i,j,n1,n2,n3,n4,n5))
+                break
+           else:
+                print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))
+               
     else:    
             continue
-    if a > b :          
-            swap = a
-            a = b
-            b = swap
+    
+    if n1 > n2 :          
+            swn1p = n1
+            n1 = n2
+            n2 = swn1p
             j += 1
-            print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+
+            if n1 < n2 and n2 < n3 and n3 < n4 and n4 < n5:
+                print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢05" % (i,j,n1,n2,n3,n4,n5))
+                break
+            else:
+                print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))    
+
     else:
             continue 
