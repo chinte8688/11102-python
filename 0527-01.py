@@ -1,8 +1,8 @@
-#numbers = input("請輸入4個整數（以空格分隔）：")
-#numbers = numbers.split()  # 將輸入以空格分隔成一個數字列表
-
 a,b,c,d = eval(input("請輸入 4 個數字以,號分開："))
 # d = int(a) + int(b) + int(c)
+
+
+
 # print("d = %d " % (d))
 print("輸入為：%d %d %d %d" % (a,b,c,d))
 i = 0
