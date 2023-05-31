@@ -5,9 +5,12 @@ i = 0
 j = 0
 swap = 0
 
+if a < b and b < c and c < d and d < e:
+        print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢01" % (i,j,a,b,c,d,e))
+        
 while True:    
     if a < b and b < c and c < d and d < e:
-        print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢01" % (i,j,a,b,c,d,e))
+        print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))
         break
     else : 
         i += 1
@@ -18,11 +21,11 @@ while True:
               e = swap
               j += 1
               
-              if a < b and b < c and c < d and d < e:
-                print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))
-                break
-              else:
-                print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,a,b,c,d,e))
+              #if a < b and b < c and c < d and d < e:
+              #  print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢02" % (i,j,a,b,c,d,e))
+              #  break
+              #else:
+              print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,a,b,c,d,e))
         else:
             continue
         if a > b or b > c or c > d: 
