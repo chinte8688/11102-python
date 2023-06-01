@@ -11,64 +11,64 @@ if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5:  # if 一開始就由小排�
 
 while n1 >= n2 or n2 >= n3 or n3 >= n4 or n4 >= n5:  # 排序未完成，進入迴圈 
     i += 1                                           # 圈數計算
-    if n1 >= n2 or n2 >= n3 or n3 >= n4 or n4 >= n5: # 如果有前數 > 後數的狀況
+    if n1 >= n2 or n2 >= n3 or n3 >= n4 or n4 >= n5: # 出現 前數 > 後數 進入
         if n4 >= n5 :                                # 如果 n4 >= n5    
             swn1p = n4                               #  
-            n4 = n5                                  #   n4,n5 對調
+            n4 = n5                                  # n4,n5 對調
             n5 = swn1p                               #   
             j += 1                                   # 交換次數 +1   
               
-            if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5:
+            if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5: # if 已經由小排到大
                 print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢02" % (i,j,n1,n2,n3,n4,n5))
                 break
-            else:
+            else:                                    # else印出目前序列    
                 print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))
     else:
-        continue
+        continue                                     # 繼續 
 
-    if n1 >= n2 or n2 >= n3 or n3 >= n4: 
-        if n3 >= n4 :     
-            swn1p = n3
-            n3 = n4
-            n4 = swn1p
-            j += 1
+    if n1 >= n2 or n2 >= n3 or n3 >= n4:             # 出現 前數 > 後數 進入
+        if n3 >= n4 :                                # 如果 n3 >= n4
+            swn1p = n3                               #
+            n3 = n4                                  # n3,n4 對調                
+            n4 = swn1p                               #           
+            j += 1                                   # 交換次數 +1 
 
-            if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5:
+            if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5: # if 已經由小排到大
                 print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢03" % (i,j,n1,n2,n3,n4,n5))
                 break
-            else:
+            else:                                    # else印出目前序列   
                 print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))
               
     else:
-            continue
+            continue                                 # 繼續   
     
-    if n1 >= n2 or n2 >= n3:      
-        if n2 >= n3:
-           swn1p = n2
-           n2 = n3
-           n3 = swn1p
-           j += 1
+    if n1 >= n2 or n2 >= n3:                         # 出現 前數 > 後數 進入   
+        if n2 >= n3:                                 # 如果 n2 >= n3  
+           swn1p = n2                                #   
+           n2 = n3                                   # n2,n3 對調  
+           n3 = swn1p                                #  
+           j += 1                                    # 交換次數 +1  
 
-           if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5:
+           if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5: # if 已經由小排到大
                 print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢04" % (i,j,n1,n2,n3,n4,n5))
                 break
-           else:
+           else:                                     # else印出目前序列   
                 print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))
                
     else:    
-            continue
+            continue                                 # 繼續    
     
-    if n1 >= n2 :          
-            swn1p = n1
-            n1 = n2
-            n2 = swn1p
-            j += 1
+    if n1 >= n2 :                                    # 如果 n1 >= n2
+            swn1p = n1                               #
+            n1 = n2                                  # n2,n3 對調
+            n2 = swn1p                               #
+            j += 1                                   # 交換次數 +1   
 
-            if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5:
+            if n1 <= n2 and n2 <= n3 and n3 <= n4 and n4 <= n5: # if 已經由小排到大
                 print("第%02d圈%02d次交換 %d %d %d %d %d 排序完畢05" % (i,j,n1,n2,n3,n4,n5))
                 break
-            else:
+            else:                                    # else印出目前序列
                 print("第%02d圈%02d次交換 %d %d %d %d %d" % (i,j,n1,n2,n3,n4,n5))    
 
     else:
-            continue 
+            continue                                 # 繼續
